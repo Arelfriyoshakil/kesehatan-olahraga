@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Kesehatan Olahraga</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login Pengguna</h2>
+    <form onsubmit="return loginUser()">
+      <input type="text" id="username" placeholder="Nama Pengguna" required>
+      <input type="password" id="password" placeholder="Kata Sandi" required>
+      <button type="submit">Masuk</button>
+    </form>
+    <p id="loginMessage"></p>
+  </div>
+
+  <script>
+    function loginUser() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if (user === "arelshakil" && pass === "07juni") {
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById("loginMessage").innerText = "Nama pengguna atau kata sandi salah!";
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>
